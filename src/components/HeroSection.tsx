@@ -45,7 +45,7 @@ const HeroSection = () => {
             >
               I design and build digital products end-to-end — from UX/UI and
               engineering to motion, photo, and video. If you want someone who
-              turns ideas into polished experiences, you’re in the right place.”
+              turns ideas into polished experiences, you’re in the right place.
             </motion.p>
 
             <motion.div
