@@ -49,7 +49,7 @@ export function Navigation() {
           key={item.href}
           href={item.href}
           aria-label={item.aria}
-          className="group relative inline-flex w-fit text-sm font-medium tracking-wide"
+          className="group relative inline-flex w-fit font-medium tracking-wide"
         >
           {/* Base text */}
           <span className="transition-opacity duration-200 group-hover:opacity-0">

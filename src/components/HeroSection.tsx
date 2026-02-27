@@ -25,7 +25,7 @@ const HeroSection = () => {
                 ✨ Not your typical Software Engineer
               </AnimatedShinyText>
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold leading-[1.05] tracking-tight text-white font-poppins">
               <motion.span
                 initial={{ opacity: 0, y: 18 }}
@@ -67,7 +67,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }}
             className="relative"
           >
-            <div className="relative mx-auto w-[280px] h-[360px] md:w-[360px] md:h-[460px] lg:w-[420px] lg:h-[520px] rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+            <div className="relative mx-auto w-[280px] h-[360px] md:w-[360px] md:h-[460px] lg:w-[420px] lg:h-[520px] rounded-3xl overflow-hidden">
               <img
                 src="/berat-uzun.png"
                 alt="Berat Uzun - Portfolio"

@@ -2,15 +2,13 @@ import FadeUp from "./FadeUp";
 import { Github, Linkedin, Download } from "lucide-react";
 
 const Footer = () => (
-  <section id="contact" className="py-32 relative">
+  <section id="contact" className="pb-10 relative">
     <div className="container mx-auto px-6 text-center">
       <FadeUp>
         <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">
           Get In Touch
         </p>
-        <h2 className="text-3xl md:text-5xl font-bold mb-6">
-          Let's Connect
-        </h2>
+        <h2 className="text-3xl md:text-5xl font-bold mb-6">Let's Connect</h2>
         <p className="text-muted-foreground max-w-lg mx-auto mb-10 leading-relaxed">
           Have a project in mind or just want to chat? I'm always open to new
           opportunities and creative collaborations.

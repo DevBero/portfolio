@@ -26,7 +26,8 @@ const animationProps: MotionProps = {
 };
 
 interface ShinyButtonProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,
+  extends
+    Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps>,
     MotionProps {
   children: React.ReactNode;
   className?: string;
@@ -39,20 +40,18 @@ export const ShinyButton = React.forwardRef<
   return (
     <motion.button
       ref={ref}
-      // Adjusted: Use hsl(var(--primary)) for the background and border
       className={cn(
-        "relative cursor-pointer rounded-lg border border-primary/30 px-6 py-2 font-medium backdrop-blur-xl transition-all duration-300 ease-in-out font-poppins",
+        "relative cursor-pointer rounded-full h-12 border border-primary/30 px-6 py-2 font-medium backdrop-blur-xl transition-all duration-300 ease-in-out font-poppins",
         "bg-primary hover:bg-primary/30",
-        "hover:shadow-[0_0_20px_hsl(var(--primary)/50%)]", // Purple glow on hover
-        className
+        "hover:shadow-[0_0_20px_hsl(var(--primary)/50%)]",
+        className,
       )}
       {...animationProps}
       {...props}
     >
       <span
-        className="relative block size-full text-sm tracking-wide uppercase text-white"
+        className="relative flex size-full items-center justify-center tracking-wide text-white"
         style={{
-          // The "Shiny" text effect
           maskImage:
             "linear-gradient(-75deg, white calc(var(--x) + 20%), transparent calc(var(--x) + 30%), white calc(var(--x) + 100%))",
           WebkitMaskImage:
@@ -62,7 +61,6 @@ export const ShinyButton = React.forwardRef<
         {children}
       </span>
 
-      {/* The Animated Border Beam */}
       <span
         style={{
           mask: "linear-gradient(white, white) content-box exclude, linear-gradient(white, white)",
