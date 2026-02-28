@@ -1,4 +1,3 @@
-
 import { Code2, Palette, Camera, Film } from "lucide-react";
 import FadeUp from "./FadeUp";
 
@@ -6,13 +5,15 @@ const skills = [
   {
     icon: Code2,
     title: "Engineering",
-    description: "Building performant, scalable applications with modern frameworks.",
+    description:
+      "Building performant, scalable applications with modern frameworks.",
     tools: ["React", "Next.js", "TypeScript", "Node.js"],
   },
   {
     icon: Palette,
     title: "Design",
-    description: "Crafting intuitive interfaces and design systems that delight users.",
+    description:
+      "Crafting intuitive interfaces and design systems that delight users.",
     tools: ["Figma", "UI/UX", "Design Systems", "Prototyping"],
   },
   {
@@ -24,13 +25,14 @@ const skills = [
   {
     icon: Film,
     title: "Motion",
-    description: "Creating dynamic motion graphics and cinematic video content.",
+    description:
+      "Creating dynamic motion graphics and cinematic video content.",
     tools: ["After Effects", "Premiere Pro", "Motion Design", "Color Grading"],
   },
 ];
 
 const SkillsSection = () => (
-  <section id="skills" className="py-32 relative">
+  <section id="what-i-do" className="py-32 relative">
     <div className="container mx-auto px-6">
       <FadeUp>
         <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3 text-center">

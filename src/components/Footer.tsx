@@ -18,7 +18,7 @@ const Footer = () => (
       <FadeUp delay={0.2}>
         <div className="flex items-center justify-center gap-4 mb-16">
           <a
-            href="https://linkedin.com"
+            href="https://de.linkedin.com/in/berat-uzun-289307222"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all card-hover"
@@ -26,7 +26,7 @@ const Footer = () => (
             <Linkedin className="w-5 h-5" />
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/DevBero"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 rounded-xl bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all card-hover"

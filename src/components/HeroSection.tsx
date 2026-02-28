@@ -6,6 +6,12 @@ import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import Meteors from "./Meteors";
 
 const HeroSection = () => {
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const user = "berat.uzun98";
+    const domain = "icloud.com";
+    window.location.href = `mailto:${user}@${domain}`;
+  };
   return (
     <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-black mt-[5rem] md:mt-0">
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -55,8 +61,8 @@ const HeroSection = () => {
               className="mt-8 flex flex-col sm:flex-row gap-3"
             >
               <ShinyButton>View my Projects</ShinyButton>
-              <InteractiveHoverButton>
-                Let&apos;s connect
+              <InteractiveHoverButton onClick={handleEmailClick}>
+                <a href="mailto:berat.uzun98@icloud.com">Let&apos;s connect</a>
               </InteractiveHoverButton>
             </motion.div>
           </div>
