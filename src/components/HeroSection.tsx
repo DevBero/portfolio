@@ -7,7 +7,7 @@ import Meteors from "./Meteors";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-black">
+    <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-black mt-[5rem]">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Meteors count={20} />
       </div>

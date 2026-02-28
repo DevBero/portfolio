@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { ShimmerButton } from "./ui/shimmer-button";
 import { Navigation } from "./Navigation";
+import { MobileNavigation } from "./Mobile-Navigation";
 
 const Header = () => {
   const { scrollY } = useScroll();
@@ -12,27 +13,20 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    // 1. Background Logic: Change style after 50px
     setIsScrolled(latest > 50);
-
-    // 2. Visibility Logic (Transferred from reference)
-    // Show if: scrolling up OR at the very top (less than 10px)
     const isScrollingUp = latest < lastScrollY;
     const isAtTop = latest < 10;
 
     if (isScrollingUp || isAtTop) {
       setIsVisible(true);
     } else if (latest > 150) {
-      // Hide only if we've scrolled down a bit to prevent flickering at the top
       setIsVisible(false);
     }
-
     setLastScrollY(latest);
   });
 
   return (
     <motion.header
-      // Framer Motion handles the initial page-load fade-down
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{
@@ -45,7 +39,6 @@ const Header = () => {
           duration: 1.5,
         },
       }}
-      // Tailwind transitions handle the scroll hide/show smoothly
       className={`
         fixed top-0 left-0 right-0 z-50 flex items-center justify-between 
         h-20 px-6 md:px-12 transition-all duration-700 ease-in-out
@@ -57,18 +50,25 @@ const Header = () => {
         }
       `}
     >
-      <div className="w-[100px] relative aspect-video transition-transform hover:scale-105 active:scale-95">
+      <div className="w-[100px] relative transition-transform hover:scale-105 active:scale-95">
         <img alt="Berat Uzun - Software Engineer" src="/beyou.svg" />
       </div>
 
+      {/* Desktop Nav: Hidden on Mobile */}
       <Navigation />
 
       <div className="flex items-center gap-4">
-        <ShimmerButton className="shadow-2xl">
-          <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white">
-            Download CV
-          </span>
-        </ShimmerButton>
+        {/* CV Button: Hidden on very small screens to make space for Logo + Hamburger */}
+        <div className="hidden sm:block">
+          <ShimmerButton className="shadow-2xl">
+            <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white">
+              Download CV
+            </span>
+          </ShimmerButton>
+        </div>
+
+        {/* Hamburger Menu: Hidden on Desktop */}
+        <MobileNavigation />
       </div>
     </motion.header>
   );

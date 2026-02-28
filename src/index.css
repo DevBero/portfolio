@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
+@custom-variant dark (&:is(.dark *));
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -146,15 +148,16 @@
 }
 
 .animate-meteor {
-  animation: meteor 4s linear infinite;
-}
-
-/* Border beam */
-@keyframes border-beam {
-  0% {
-    offset-distance: 0%;
+    animation: meteor 4s linear infinite;
   }
-  100% {
-    offset-distance: 100%;
+  
+  /* Border beam */
+  @keyframes border-beam {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
   }
-}
+  
