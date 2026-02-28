@@ -7,7 +7,7 @@ import Meteors from "./Meteors";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-black mt-[5rem]">
+    <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-black mt-[5rem] md:mt-0">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Meteors count={20} />
       </div>
@@ -67,9 +67,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 1.0 }}
             className="relative"
           >
-            <div className="relative mx-auto w-[280px] h-[360px] md:w-[360px] md:h-[460px] lg:w-[420px] lg:h-[520px] rounded-3xl overflow-hidden">
+            <div className="relative mx-auto w-full h-full rounded-3xl overflow-hidden">
               <img
-                src="/berat-uzun.png"
+                src="/hero-berat-uzun.png"
                 alt="Berat Uzun - Portfolio"
                 className="object-cover"
               />

@@ -29,9 +29,9 @@ export const NAV_ITEMS: NavItem[] = [
         action: "underline",
     },
     {
-        label: "Services",
-        href: "#services",
-        aria: "Services",
+        label: "Playground",
+        href: "#playground",
+        aria: "Playground",
         color: "#9241d4",
         action: "underline",
     },

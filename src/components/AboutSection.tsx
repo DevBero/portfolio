@@ -81,6 +81,7 @@ const AboutSection = () => {
                   iconSize={mobile ? 40 : 56}
                 >
                   <TechIcon src="/orbit/react.svg" alt="React" />
+                  <TechIcon src="/orbit/aws.svg" alt="React" />
                   <TechIcon src="/orbit/git.svg" alt="Git" />
                   <TechIcon src="/orbit/docker.svg" alt="Docker" />
                   <TechIcon src="/orbit/davinci.png" alt="DaVinci" />

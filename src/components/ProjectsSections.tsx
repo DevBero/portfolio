@@ -16,7 +16,13 @@ const projects = [
     title: "HospitalFlow — Room & Patient Management App",
     description:
       "A hospital management system for controlling room bookings, patient assignments, and medical notes. Includes role-based access for admins and cleaners, real-time room status updates. Not visitable since hosted in private network.",
-    tags: ["App Development", "User Roles", "Dashboard", "Healthcare"],
+    tags: [
+      "App Development",
+      "User Roles",
+      "Dashboard",
+      "Healthcare",
+      "AWS Cognito",
+    ],
     image: "/projects/wischwunder.png",
     label: "wischwunder.com",
   },
@@ -30,6 +36,7 @@ const projects = [
       "Logo Design",
       "Product Strategy",
       "Vite",
+      "AWS Cognito",
     ],
     image: "/projects/simplifyd.png",
     label: "simplifyd.site",
