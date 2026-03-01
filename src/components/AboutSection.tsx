@@ -9,7 +9,6 @@ const TechIcon = ({ src, alt }: { src: string; alt: string }) => (
 );
 
 const AboutSection = () => {
-  // Logic to adjust radius for mobile
   const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
@@ -23,7 +22,6 @@ const AboutSection = () => {
     <section id="about" className="py-32 relative">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-16">
-          {/* Left: Text Content */}
           <div className="flex-1 text-center md:text-left max-w-lg mb-[10rem] md:mb-0">
             <FadeUp>
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -43,17 +41,12 @@ const AboutSection = () => {
               </p>
             </FadeUp>
           </div>
-
-          {/* Right: Orbit */}
           <div className="flex-1 relative h-[400px] w-full md:h-[600px] mb-[5rem] md:mb-0">
             <FadeUp className="h-full w-full">
               <div className="relative h-full w-full flex items-center justify-center overflow-visible">
-                {/* Center Label */}
                 <div className="absolute z-10 text-gradient font-bold text-xl md:text-3xl">
                   My Stack
                 </div>
-
-                {/* Inner Orbit - Desktop: 140, Mobile: 80 */}
                 <OrbitingCircles
                   radius={mobile ? 80 : 140}
                   duration={20}
@@ -73,7 +66,6 @@ const AboutSection = () => {
                   />
                 </OrbitingCircles>
 
-                {/* Outer Orbit - Desktop: 260, Mobile: 150 */}
                 <OrbitingCircles
                   radius={mobile ? 150 : 260}
                   duration={35}

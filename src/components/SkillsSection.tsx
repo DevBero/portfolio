@@ -47,7 +47,6 @@ const SkillsSection = () => (
         {skills.map((skill, i) => (
           <FadeUp key={skill.title} delay={i * 0.1}>
             <div className="group relative p-6 rounded-xl bg-card border border-border card-hover h-full">
-              {/* Border beam effect on hover */}
               <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-primary/5 to-transparent" />
 
               <div className="relative z-10">

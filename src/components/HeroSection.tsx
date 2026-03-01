@@ -12,6 +12,17 @@ const HeroSection = () => {
     const domain = "icloud.com";
     window.location.href = `mailto:${user}@${domain}`;
   };
+
+  const handleScrollToProjects = () => {
+    const section = document.getElementById("projects");
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <section className="relative w-full min-h-screen flex items-center overflow-hidden bg-black mt-[5rem] md:mt-0">
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -60,7 +71,9 @@ const HeroSection = () => {
               transition={{ duration: 0.6, ease: "easeOut", delay: 2.7 }}
               className="mt-8 flex flex-col sm:flex-row gap-3"
             >
-              <ShinyButton>View my Projects</ShinyButton>
+              <ShinyButton onClick={handleScrollToProjects}>
+                View my Projects
+              </ShinyButton>
               <InteractiveHoverButton onClick={handleEmailClick}>
                 <a href="mailto:berat.uzun98@icloud.com">Let&apos;s connect</a>
               </InteractiveHoverButton>

@@ -54,11 +54,9 @@ const Header = () => {
         <img alt="Berat Uzun - Software Engineer" src="/beyou.svg" />
       </div>
 
-      {/* Desktop Nav: Hidden on Mobile */}
       <Navigation />
 
       <div className="flex items-center gap-4">
-        {/* CV Button: Hidden on very small screens to make space for Logo + Hamburger */}
         <div className="hidden sm:block">
           <ShimmerButton className="shadow-2xl">
             <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white">
@@ -67,7 +65,6 @@ const Header = () => {
           </ShimmerButton>
         </div>
 
-        {/* Hamburger Menu: Hidden on Desktop */}
         <MobileNavigation />
       </div>
     </motion.header>
