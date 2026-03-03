@@ -58,7 +58,7 @@ const Header = () => {
 
       <div className="flex items-center gap-4">
         <div className="hidden sm:block">
-          <a href="/Berat_Uzun_CV.pdf" download>
+          <a href="/Berat_Uzun_CV_Project_Manager.pdf" download>
             <ShimmerButton className="shadow-2xl">
               <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white">
                 Download CV
