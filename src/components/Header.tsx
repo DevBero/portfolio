@@ -58,11 +58,13 @@ const Header = () => {
 
       <div className="flex items-center gap-4">
         <div className="hidden sm:block">
-          <ShimmerButton className="shadow-2xl">
-            <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white">
-              Download CV
-            </span>
-          </ShimmerButton>
+          <a href="/Berat_Uzun_CV.pdf" download>
+            <ShimmerButton className="shadow-2xl">
+              <span className="whitespace-pre-wrap text-center font-medium leading-none tracking-tight text-white">
+                Download CV
+              </span>
+            </ShimmerButton>
+          </a>
         </div>
 
         <MobileNavigation />
